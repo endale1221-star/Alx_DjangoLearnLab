@@ -2,8 +2,15 @@
 
 Command:
 
-Book.objects.all()
+from bookshelf.models import Book
+
+book = Book.objects.get(title="1984")
+book.title
+book.author
+book.publication_year
 
 Expected Output:
 
-<QuerySet [<Book: 1984>]>
+1984
+George Orwell
+1949
